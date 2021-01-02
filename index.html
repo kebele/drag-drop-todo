@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>2</title>
+</head>
+
+<body>
+    <div class="modal" id="todo_form">
+        <div class="header">
+            <div class="title">Add Todo</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <form class="body" id="form">
+            <input type="text" id="input" class="input" placeholder="iş gir" autocomplete="off" />
+            <input type="submit" value="Add Todo" id="todo_submit" />
+        </form>
+    </div>
+
+
+    <!-- todo -->
+    <div class="todo-container">
+        <div class="status" id="no_status">
+            <h2>No Status</h2>
+            <button id="add_btn" data-target-modal="#todo_form">+ Add Todo</button>
+            <div class="todo" draggable="true">
+                <p>fatura yatır</p>
+                <span class="close">&times;</span>
+            </div>
+        </div>
+        <div class="status" id="not-start">
+            <h2>Not Started</h2>
+        </div>
+        <div class="status" id="in-progress">
+            <h2>In Progress</h2>
+        </div>
+        <div class="status" id="completed">
+            <h2>Completed</h2>
+        </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <script>
+        console.log("array : " + JSON.parse(localStorage.getItem('not_start')))
+    </script>
+
+
+
+    <script src="scriptX.js"></script>
+    <script src="drag.js"></script>
+    <script src="modal.js"></script>
+    <script src="olustur.js"></script>
+</body>
+
+</html>
